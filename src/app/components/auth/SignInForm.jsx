@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import SignInWithSocials from "./SignInWithSocials";
 
 export function SignInForm() {
   const router = useRouter();
@@ -103,6 +104,9 @@ export function SignInForm() {
         <Button type="reset" variant="secondary">
           Reset
         </Button>
+      </div>
+      <div>
+        <SignInWithSocials />
       </div>
     </Form>
   );

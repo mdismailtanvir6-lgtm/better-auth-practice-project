@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import SignInWithSocials from "./SignInWithSocials";
 
 export function SignUpForm() {
   const router = useRouter();
@@ -27,7 +28,7 @@ export function SignUpForm() {
       name: data.name,
       email: data.email,
       password: data.password,
-      callbackURL: "/sign-in"
+      // callbackURL: "/dashboard",
     });
 
     if (error) {
@@ -37,7 +38,7 @@ export function SignUpForm() {
 
     console.log("Sign up response:", resData);
 
-    router.push("/sign-in");
+    router.push("/dashboard");
   };
 
   return (
@@ -121,6 +122,11 @@ export function SignUpForm() {
         <Button type="reset" variant="secondary">
           Reset
         </Button>
+      </div>
+
+      {/* ===== social sign in =====*/}
+      <div>
+        <SignInWithSocials />
       </div>
     </Form>
   );

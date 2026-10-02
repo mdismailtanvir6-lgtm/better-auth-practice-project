@@ -101,7 +101,7 @@ const Navbar = () => {
             <div className="flex gap-5">
               <p className="flex items-center">{`Welcome, ${session.user.name}`}</p>
               <button onClick={handleSignOut} className="btn btn-outline">
-                Log Out
+                Sign Out
               </button>
             </div>
           ) : (
